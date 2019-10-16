@@ -2,7 +2,7 @@ import java.nio.file.AccessDeniedException;
 import java.util.Optional;
 
 /**
- * Represents an implementation of the employee authentication level access methods - NOT fully implemented
+ * Represents an implementation of the employee access methods - NOT fully implemented
  */
 public class EmployeeServiceImpl implements EmployeeService {
     EmployeeRepositoryImpl empRepo;
