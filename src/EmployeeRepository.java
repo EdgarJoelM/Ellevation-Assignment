@@ -1,8 +1,10 @@
+import java.util.Optional;
+
 /**
- * Represents the employee repository containing all database crud operations and salary change methods
+ * Represents the employee repository containing all database crud operations and salary change methods. Database update
+ * functions would typically return a boolean value indicating the success of the query
  */
 public interface EmployeeRepository {
-
     /**
      * Creates an employee within the employee database
      * @param employee Represents an employee to be created within the database
@@ -10,10 +12,10 @@ public interface EmployeeRepository {
     void createEmployee(Employee employee);
 
     /**
-     * Removes an employee from the employee database
-     * @param employee Represents an employee to be removed from the database
+     * Retrieves the information for a given employee from the employee database
+     * @param id Represents an employee to be read from the database
      */
-    void removeEmployee(Employee employee);
+    Optional<Employee> findEmployee(int id);
 
     /**
      * Updates an employee's information within the employee database

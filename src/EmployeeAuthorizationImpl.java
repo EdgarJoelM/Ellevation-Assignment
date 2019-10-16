@@ -2,6 +2,19 @@
  * Represents authorization access of Ellevation Inc. application for viewing and editing purposes
  */
 public class EmployeeAuthorizationImpl implements EmployeeAuthorization {
+    private EmployeeAuthorizationImpl() { }
+
+    private static class ServiceInstance {
+        private static final EmployeeAuthorizationImpl INSTANCE = new EmployeeAuthorizationImpl();
+    }
+
+    /**
+     * Retrieves the current instance of an EmployeeAuthorizationImpl
+     * @return the current instance of an EmployeeAuthorizationImpl
+     */
+    public static EmployeeAuthorizationImpl getInstance() {
+        return ServiceInstance.INSTANCE;
+    }
 
     @Override
     public boolean canView(Employee reader, Employee employee) {

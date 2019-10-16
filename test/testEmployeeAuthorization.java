@@ -21,7 +21,7 @@ public class testEmployeeAuthorization {
                 50000, 10, 1000, 2);
         julie = new Employee(4, "Julie", 21, "Employee", true, "Product",
                 50000, 10, 1000, 1);
-        empAuth = new EmployeeAuthorizationImpl();
+        empAuth = EmployeeAuthorizationImpl.getInstance();
     }
 
     @Test
